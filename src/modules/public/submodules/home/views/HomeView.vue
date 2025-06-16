@@ -1,5 +1,5 @@
 <template>
     <h1 class="text-red-500">
-        Hola desde submodule HomeView
+        Hola desde HomeView
     </h1>
 </template>
