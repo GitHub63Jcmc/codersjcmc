@@ -1,4 +1,7 @@
 <script setup>
+  import { RouterLink } from 'vue-router';
+  import AppLogo from '@/modules/shared/components/AppLogo.vue';
+
     const openSidebar = defineModel();
 </script>
 
@@ -19,9 +22,9 @@
                    <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
                 </svg>
              </button>
-            <a href="https://flowbite.com" class="flex ms-2 md:me-24">
-              <img src="/src/assets/img/LogoJcmcN1.png" class="h-16 me-3" alt="FlowBite Logo" />
-            </a>
+            <RouterLink to="/">
+              <AppLogo />
+            </RouterLink>
           </div>
           <div class="flex items-center">
               <div class="flex items-center ms-3">
