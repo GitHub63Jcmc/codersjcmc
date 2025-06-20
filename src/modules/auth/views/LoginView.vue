@@ -1,5 +1,7 @@
 <script setup>
+    // import FormCheckbox from '@/modules/shared/components/FormCheckbox.vue';
     import FormInput from '@/modules/shared/components/FormInput.vue';
+    import FormLabel from '@/modules/shared/components/FormLabel.vue';
 
 </script>
 
@@ -9,12 +11,15 @@
     </h1>
     <form class="space-y-4 md:space-y-6" action="#">
         <div>
-            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-
+            <FormLabel for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                Your email
+            </FormLabel>
             <FormInput type="email" name="email" id="email" placeholder="name@company.com" required />
         </div>
         <div>
-            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+            <FormLabel for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                Password
+            </FormLabel>
             <FormInput type="password" name="password" id="password" placeholder="••••••••"  required />
         </div>
         <div class="flex items-center justify-between">
