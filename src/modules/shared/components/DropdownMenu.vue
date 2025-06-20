@@ -5,11 +5,12 @@
 
 <template>
     <div class="relative">
-        <div>
+        <div @click="open = !open">
             <slot name="trigger"></slot>
         </div>
 
-        <div class="absolute z-50 end-0 mt-2 w-48">
+        <div v-show="open" 
+            class="absolute z-50 end-0 mt-2 w-48">
             <div class="bg-white shadow-lg rounded-md py-1 flex flex-col">
                 <slot></slot>
             </div>
