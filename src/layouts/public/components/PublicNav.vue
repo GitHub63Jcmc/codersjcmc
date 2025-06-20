@@ -4,6 +4,7 @@
     import PublicNavLink from './PublicNavLink.vue';
     import AppLogo from '@/modules/shared/components/AppLogo.vue';
     import DropdownMenu from '@/modules/shared/components/DropdownMenu.vue';
+    import DropdownItem from './DropdownItem.vue';
     const openMenu = ref(false);
 </script>
 
