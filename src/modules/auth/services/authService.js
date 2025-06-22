@@ -6,7 +6,7 @@ export default {
             const response = await apiClient.post('auth/login', credencials);
             return response.data;
         } catch (error) {
-            return error.response.data;
+             throw error.response.data;
         }
     },
 
