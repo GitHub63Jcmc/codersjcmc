@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import authService from "../services/authService";
-import { computed } from "vue";
+import { computed, ref } from "vue";
 
 export const useAuthStore = defineStore('auth', () => {
     const token = ref(localStorage.getItem('access_token') || null);
@@ -21,3 +21,9 @@ export const useAuthStore = defineStore('auth', () => {
     }
 
 });
+
+// {
+//     "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NTA2MTM5NjIsImV4cCI6MTc1MDYxNzU2MiwibmJmIjoxNzUwNjEzOTYyLCJqdGkiOiJkZXdzeWh1YzRCVlFNclpKIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.E0O0_3cWTgpaBpFD0_0L8VpwBAKOt19XQgmuA2EZhYw",
+//     "token_type": "bearer",
+//     "expires_in": 3600
+// }
