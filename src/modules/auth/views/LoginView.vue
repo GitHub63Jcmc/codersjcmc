@@ -12,8 +12,8 @@
     const router = useRouter();
 
     const credentials = reactive({
-        // email: 'victor@codersfree.com',
-        // password: '12345678'
+        email: '',
+        password: ''
     });
 
     const errors =ref([]);
@@ -51,7 +51,9 @@
         </svg>
         <span class="sr-only">Danger</span>
         <div>
-            <span class="font-medium">Ensure that these requirements are met:</span>
+            <span class="font-medium">
+                ¡Ups! Ha ocurrido un error.
+            </span>
             <ul class="mt-1.5 list-disc list-inside">
                 <li v-for="error in errors" :key="index">
                     {{ error }}
@@ -66,13 +68,13 @@
             <FormLabel for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                 Your email
             </FormLabel>
-            <FormInput type="email" name="email" id="email" placeholder="name@company.com" />
+            <FormInput v-model="credentials.email" type="email" name="email" id="email" placeholder="name@company.com" />
         </div>
         <div>
             <FormLabel for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                 Password
             </FormLabel>
-            <FormInput type="password" name="password" id="password" placeholder="••••••••" />
+            <FormInput v-model="credentials.password" type="password" name="password" id="password" placeholder="••••••••" />
         </div>
         <div class="flex items-center justify-between">
             <div class="flex items-start">
