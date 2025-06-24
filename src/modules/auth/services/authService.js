@@ -15,7 +15,7 @@ export default {
             const response = await apiClient.post('auth/logout');
             return response.data;
         } catch (error) {
-            return error.response.data;
+            throw error.response.data;
         }
     },
 
@@ -24,7 +24,7 @@ export default {
             const response = await apiClient.post('auth/refresh');
             return response.data;
         } catch (error) {
-            return error.response.data;
+            throw error.response.data;
         }
     },
 
@@ -33,7 +33,7 @@ export default {
             const response = await apiClient.post('auth/me');
             return response.data;
         } catch (error) {
-            return error.response.data;
+            throw error.response.data;
         }
     },
 }

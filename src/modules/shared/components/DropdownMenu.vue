@@ -9,7 +9,8 @@
             <slot name="trigger"></slot>
         </div>
 
-        <div v-show="open" 
+        <div @click="open = false"
+            v-show="open" 
             class="absolute z-50 end-0 mt-2 w-48">
             <div class="bg-white shadow-lg rounded-md py-1 flex flex-col">
                 <slot></slot>

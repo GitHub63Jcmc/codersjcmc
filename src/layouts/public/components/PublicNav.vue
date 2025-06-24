@@ -38,7 +38,9 @@
                             Admin
                         </DropdownItem>
 
-                        <button class="block text-left w-full px-4 py-2 leading-5 text-gray-700 hover:bg-gray-100 cursor-pointer">
+                        <button 
+                            @click="authStore.logout()"
+                            class="block text-left w-full px-4 py-2 leading-5 text-gray-700 hover:bg-gray-100 cursor-pointer">
                             Logout
                         </button>
                     </template>
