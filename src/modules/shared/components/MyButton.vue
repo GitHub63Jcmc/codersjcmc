@@ -15,7 +15,7 @@
 </script>
 
 <template>
-    <button class="w-full text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center" 
+    <button class="w-full text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center disabled:opacity-50" 
         :class="buttonClasses">
         <slot></slot>
     </button>

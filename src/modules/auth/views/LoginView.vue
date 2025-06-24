@@ -16,22 +16,15 @@
         // password: '12345678'
     });
 
-    const errors =ref([
-        {
-            field: 'email',
-            message: 'Email is required'
-        },
-        {
-            field: 'password',
-            message: 'Password is required'
-        }
-    ]);
+    const errors =ref([]);
+    const isLoading = ref(false);
 
     async function handleLogin() {
 
         errors.value = []; // Reset errors
 
         try {
+            isLoading.value = true;
             await authStore.login(credentials);
             router.push('/');
         } catch (error) {
@@ -40,6 +33,8 @@
             for (const field in responseErrors) {
                 errors.value.push(responseErrors[field][0]);
             }
+        } finally {
+            isLoading.value = false;
         }
     }
 
@@ -94,7 +89,7 @@
             </TextLink>
         </div>
 
-        <MyButton type="submit">
+        <MyButton type="submit" :disabled="isLoading">
             Sign in
         </MyButton>
 
@@ -106,5 +101,3 @@
         </p>
     </form>
 </template>
-
-<!-- Joao cabral  -->
